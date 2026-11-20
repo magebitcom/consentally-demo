@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The ConsentAlly install tag, exactly as the dashboard gives it: first, before any other script. -->
-    <!-- prettier-ignore -->
-    <script src="https://edge.consentally.com/adc9dd9ee6208e3b.js" data-ca-key="inzhgqu7rlp73dpt" crossorigin="anonymous"></script>
+    <!-- No ConsentAlly install tag here: the container's ConsentAlly tag loads the banner. -->
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -49,18 +47,19 @@
         <h2 id="setup-title">How this page is set up</h2>
         <ol>
           <li>
-            The ConsentAlly install tag, first in <code>&lt;head&gt;</code> (store key
-            <code>inzhgqu7rlp73dpt</code>).
+            The Google Tag Manager container <code>GTM-TCGC8K6T</code>, the only script in
+            <code>&lt;head&gt;</code>.
           </li>
           <li>
-            The Google Tag Manager container <code>GTM-TCGC8K6T</code>, directly after it. The
-            container holds a Google Analytics 4 tag for <code>G-5DCLB8XT3F</code>.
+            In the container, a tag of ConsentAlly's Tag Manager template (store key
+            <code>inzhgqu7rlp73dpt</code>) on Consent Initialization, and a Google Analytics 4 tag
+            for <code>G-5DCLB8XT3F</code>.
           </li>
         </ol>
         <p>
-          ConsentAlly sets Google Consent Mode's defaults to denied before the container loads and
-          sends an update when you choose in the banner, which the container applies before its next
-          event. Every visitor sees the banner, in every region.
+          The ConsentAlly tag sets Google Consent Mode's defaults to denied before any other tag
+          fires, loads the banner, and the banner sends an update when you choose, which the
+          container applies before its next event. Every visitor sees the banner, in every region.
         </p>
       </aside>
 
