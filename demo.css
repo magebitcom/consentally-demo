@@ -205,3 +205,9 @@ td[data-state="denied"] {
 .index li {
   margin-bottom: 8px;
 }
+
+.setup ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  color: var(--quiet);
+}
